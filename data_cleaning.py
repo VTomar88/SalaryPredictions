@@ -50,9 +50,9 @@ df.aws.value_counts()
 df['excel'] = df['Job Description'].apply(lambda x: 1 if 'excel' in x.lower() else 0)
 df.excel.value_counts()
 
-df.columns
-
+# Drop irrelevant column
 df_out = df.drop(['Unnamed: 0'], axis =1)
 
+# export data in csv format
 df_out.to_csv('salary_data_cleaned.csv',index = False)
 
